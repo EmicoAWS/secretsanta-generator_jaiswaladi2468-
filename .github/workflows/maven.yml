@@ -31,4 +31,5 @@ jobs:
         docker build -t secret-santa .
         docker tag secret-santa:latest tomicoazure/secret-santa:latest
         docker push tomicoazure/secret-santa:latest
+        docker run -d --name tomico-secret-santa -p 8080:8080 tomicoazure/secret-santa:latest
 
